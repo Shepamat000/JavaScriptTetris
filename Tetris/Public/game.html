@@ -1,0 +1,118 @@
+<html>
+<head>
+    <title> Tetris </title>
+    <style>
+        body {
+            background-color: #1e233d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #game {
+            display: flex;
+            justify-content: left;
+            align-items: flex-end;
+            text-align: left;
+        }
+
+        #canvas {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        #Tetris {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #score, #lines, #high-score, #level {
+            color:#fff;
+            text-align: left;
+            font-size: 32px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #Name-entry-input { 
+            color:#000;
+            text-align: center;
+            top:20px; 
+            left:40px; 
+            width:150px; 
+            height:20px 
+        }
+
+        #Name-entry { 
+            color:#fff;
+            text-align: center;
+            top:20px; 
+            left:40px; 
+            width:150px; 
+            height:20px 
+        }
+
+        #side-panel {
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            align-items: center; /* Center elements */
+            margin-left: 10px; /* Add some spacing from the game canvas */
+        }
+
+        #Hold-box {
+            color:#fff;
+            text-align: center;
+            font-size: 24px;
+            margin-right: 250px;
+            margin-top: 100px;
+        }
+
+        #scores {
+            margin-top: 540px;
+        }
+
+        
+    </style>
+</head>
+
+<body> 
+    <div id="game">
+        <div id = "canvas">
+            <div id="level">Level: 0</div>
+            <div id="lines">Lines: 0</div>
+            <canvas id = "Tetris" width = "300" height = "600"> </canvas>
+            <div id="Name-entry">Username:</div>
+            <input id="Name-entry-input"></textarea>
+            <button id = "Play-button" onclick="startGame()">Play!</button>
+
+        </div>
+
+        
+    </div>
+    <div id="side-panel">
+        <div id="Hold-box">
+            <div>Hold:</div>
+            <canvas id = "Hold" width = "100" height = "100"> </canvas>
+        </div>
+        <div id="scores">
+            <div id="score">Score: 0</div>
+            <div id="high-score">High Score: 0</div>
+        </div>
+    </div>  
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="board.js"></script>
+    <script src="pieces.js"></script>
+    <script src="player.js"></script>
+    <script src="render.js"></script>
+    <script src="tetris.js"></script>
+    <script src="controls.js"></script>
+</body>
+
+</html>
