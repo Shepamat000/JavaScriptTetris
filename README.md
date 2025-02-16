@@ -40,4 +40,5 @@ npm install express@4
 npm install socket.io
 ```
 To install dependencies
+
 4. Run `node index.js`.  The server will now be running and direct users to game.html, and can be accessed through local host or hosted on a webserver.
