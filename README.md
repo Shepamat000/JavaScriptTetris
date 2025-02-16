@@ -14,8 +14,8 @@ Controls (PC):
  - Left/Right arrows to move pieces
  - Down arrow to fast drop pieces by a row
  - Space bar to "instant drop" to the bottom of the board
- - q and e to rotate pieces left and right
- - c to exchange 'hold' pieces
+ - Q and E to rotate pieces left and right
+ - C to exchange 'hold' pieces
 
 Controls (Mobile)
  - Tap the left and right side of the game area to move pieces
