@@ -1,7 +1,7 @@
 # JavascriptTetris
- A javascript implementation of the game tetris, utilizing HTML Canvas and NodeJS
+ A JavaScript implementation of the game tetris, utilizing HTML Canvas and NodeJS
 
-A Javascript Tetris implementation, featuring a NodeJS socket.io server to host the site and communicate the current high score, and six JavaScript that create the board, pieces, player, renderer, controls, and main game logic.  The program is written in a functional programming style, and utilizes the canvas feature of HTML, implemented in game.html, to draw the game.  
+A JavaScript Tetris implementation, featuring a NodeJS socket.io server to host the site and communicate the current high score, and six JavaScript that create the board, pieces, player, renderer, controls, and main game logic.  The program is written in a functional programming style, and utilizes the canvas feature of HTML, implemented in game.html, to draw the game.  
 
 Features:
 
