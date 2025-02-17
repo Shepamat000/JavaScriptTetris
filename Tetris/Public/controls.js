@@ -18,15 +18,7 @@ document.addEventListener('keydown', event => {
             break;
         case 'c':
             if (newGame === 'false' && gameOver === 'false')
-                if (player.hasHold) {
-                    let Temp = player.holdPiece;
-                    player.holdPiece = player.matrix;
-                    player.matrix = Temp;
-                } else {
-                    player.holdPiece = player.matrix;
-                    player.matrix=newPiece();
-                    player.hasHold = true;
-                }
+                playerSwap();
             break;
         case 'e':
             playerRotate(1);
@@ -64,14 +56,6 @@ canvas.addEventListener("touchstart", (event) => {
 // Mobile hold box
 holdCanvas.addEventListener("touchstart", (event) => {
     if (newGame === 'false' && gameOver === 'false')
-        if (player.hasHold) {
-            let Temp = player.holdPiece;
-            player.holdPiece = player.matrix;
-            player.matrix = Temp;
-        } else {
-            player.holdPiece = player.matrix;
-            player.matrix=newPiece();
-            player.hasHold = true;
-        }
+        playerSwap ()
     event.preventDefault(); // Prevent scrolling when touching
 });

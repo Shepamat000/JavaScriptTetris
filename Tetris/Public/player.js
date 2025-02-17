@@ -4,6 +4,7 @@ const player = {
     matrix: newPiece(),
     holdPiece: createPiece('Empty'),
     hasHold: false,
+    canSwap: true,
     score: 0,
     lines: 0,
 }
@@ -11,6 +12,7 @@ const player = {
 function resetPlayer () {
     player.pos.x = (columns/2 | 0) - (player.matrix[0].length/2 | 0);
     player.pos.y = 0;
+    player.canSwap = true;
     player.matrix = newPiece();
 
    // Game is over if player still collides after resetting
@@ -69,4 +71,23 @@ function instantDrop () {
     arenaSweep();
     resetPlayer();
     dropCounter = 0;
+}
+
+function playerSwap () {
+    if (player.canSwap) {
+        player.pos.x = (columns/2 | 0) - (player.matrix[0].length/2 | 0);
+        player.pos.y = 0;
+        if (player.hasHold) {
+            let Temp = player.holdPiece;
+            player.holdPiece = player.matrix;
+            player.matrix = Temp;
+        } else {
+            player.holdPiece = player.matrix;
+            player.matrix=newPiece();
+            player.hasHold = true;
+        }
+        player.canSwap = false;
+    }
+
+
 }

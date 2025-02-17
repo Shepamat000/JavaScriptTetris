@@ -51,9 +51,13 @@ function resetGame () {
     player.matrix = newPiece();
 
     arena.forEach(row => row.fill(0));
+
     player.score = 0;
     player.lines = 0;
-    level - 0;
+    player.holdPiece = createPiece('Empty');
+    player.hasHold = false;
+
+    level = 0;
 }
 
 let dropCounter = 0;
